@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-image: url(https://lindahalcombfineart.files.wordpress.com/2010/10/study-3-gbw.jpg);
+  text-align: center;
+}
+
+h2 {
+  font: 25px/1 Helvetica, Verdana, sans-serif;
+  line-height: 175px;
+  margin: 0;
+  color: #ccc;
+}
+
+h3 {
+  text-align: center;
+  font: 24px/1 Helvetica, Verdana, sans-serif;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #667;
+  text-decoration: underline;
+}
+
+.subBreed > h3 {
+  color: #667;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 170px;
+}
+
+.breedImages {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  max-height: 300px;
+  overflow: scroll;
+  justify-content: center;
+}
+
+#gallery {
+  height: 150px;
+  width: 150px;
+  transition: ease 0.8s;
+  cursor: pointer;
+  box-shadow: 0px 2px 20px black;
+}
+
+#gallery:hover {
+  transform: scale(1.1);
+}
+
+.singlePic > img {
+  height: 200px;
+  box-shadow: 1px 1px 20px black;
+}
+
+.singlePic {
+  margin-top: 50px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  font: 13px/1 Helvetica, Verdana, sans-serif;
+  background-color: #ccc;
+  outline: none;
+  cursor: pointer;
+  color: #667;
+  border-style: dotted;
+  border-color: #667;
+  margin-top: 10px;
+  box-shadow: 0px 2px 2px #b9b9b9;
+}
+
+button:hover {
+  color: #000;
+  opacity: 0.8;
+}
+
+.breed {
+  width: 1000px;
+  max-height: 100vh;
+  overflow: scroll;
+  margin-right: 30px;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+
+.subBreed {
+  width: 0px;
+  max-height: 100vh;
+  overflow: scroll;
+  margin-left: -20px;
+  padding-top: 10px;
+  border-left: 2px solid #ccc;
+  box-shadow: 5px 3px 8px #e4dcdc;
+}
+
+#first, #second {
+  overflow: auto;
+  list-style-type: none;
+}
+
+li {
+  float: left;
+  margin: 2px;
+  border-right: 2px solid #aaa;
+  padding: 0 20px;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #ccc;
+  font: 25px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+li a:hover {
+  color: #667;
+  cursor: pointer;
+}
+
+#second > li a {
+  color: #ccc;
+  transition: all 0.8s ease;
+}
+
+#second > li a:hover {
+  color: #667;
+}
