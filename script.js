@@ -135,6 +135,8 @@ function renderSubBreeds(breed) {
         navBreed.style.width = '500px';
       }
     } else {
+      main.style.marginTop = '170px';
+      main.style.background = '#fff';
       subBreed.style.width = '0px';
       navBreed.style.width = '1000px';
     }
@@ -148,7 +150,7 @@ function renderRandomImage(url) {
     let singlePic = document.querySelector('.singlePic');
     let brTag = document.querySelector('br');
     singlePic.insertBefore(randomImage, brTag);
-    
+
     let button = document.querySelector('#nextDog');
     button.addEventListener('click', function(event) {
       api(url, function(data) {
