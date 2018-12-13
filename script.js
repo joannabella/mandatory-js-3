@@ -5,6 +5,7 @@ let subBreed = document.querySelector('.subBreed');
 let main = document.querySelector('main');
 let h2 = document.querySelector('h2');
 let pictures = document.querySelector('.pictures');
+let header = document.querySelector('header');
 let hash = window.location.hash;
 
 
@@ -14,6 +15,7 @@ api('breeds/list/all', function(data) {
     let aLink = document.createElement('a');
     aLink.onclick = function() {
       viewBreedPage(key);
+      header.style.height = '150px';
     };
     aLink.innerHTML = key;
     ulFirst.appendChild(li);
@@ -41,6 +43,7 @@ function request(path, callback) {
 function pageLoad() {
   if (hash.length === 0) {
     render('breeds/image/random');
+    header.style.height = '0px';
   } else if (hash.length > 0) {
     let hashValue = hash.replace('#', '');
     let breedSplit = hashValue.split('-');
@@ -126,6 +129,8 @@ function renderSubBreeds(breed) {
         linkA.innerHTML = item;
         ulSecond.appendChild(li);
         li.appendChild(linkA);
+        main.style.marginTop = '170px';
+        main.style.background = '#fff';
         subBreed.style.width = '500px';
         navBreed.style.width = '500px';
       }
@@ -143,7 +148,7 @@ function renderRandomImage(url) {
     let singlePic = document.querySelector('.singlePic');
     let brTag = document.querySelector('br');
     singlePic.insertBefore(randomImage, brTag);
-
+    
     let button = document.querySelector('#nextDog');
     button.addEventListener('click', function(event) {
       api(url, function(data) {

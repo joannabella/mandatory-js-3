@@ -12,13 +12,26 @@ header {
   width: 100%;
   background-image: url(https://lindahalcombfineart.files.wordpress.com/2010/10/study-3-gbw.jpg);
   text-align: center;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
   font: 25px/1 Helvetica, Verdana, sans-serif;
-  line-height: 175px;
   margin: 0;
   color: #ccc;
+}
+
+header > a {
+  font: 20px/1 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  color: #ccc;
+  display: inline-block;
+  padding-top: 20px;
+  text-decoration: none;
 }
 
 h3 {
@@ -40,12 +53,12 @@ h3 {
 }
 
 main {
+  background-image: url(https://images.wallpaperscraft.com/image/paw_print_background_surface_pattern_69479_1280x1024.jpg);
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 170px;
 }
 
 .breedImages {
